@@ -1,0 +1,76 @@
+\begin{thebibliography}{10}
+
+\bibitem{zhang2015assembler}
+Chao Zhang, Yu~Zheng, Xiuli Ma, and Jiawei Han.
+\newblock Assembler: efficient discovery of spatial co-evolving patterns in
+  massive geo-sensory data.
+\newblock In {\em Proceedings of the 21th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pp. 1415--1424. ACM, 2015.
+
+\bibitem{cheng2016finding}
+Yun Cheng, Xiucheng Li, and Yan Li.
+\newblock Finding dynamic co-evolving zones in spatial-temporal time series
+  data.
+\newblock In {\em Joint European Conference on Machine Learning and Knowledge
+  Discovery in Databases}, pp. 129--144. Springer, 2016.
+
+\bibitem{koperski1996spatial}
+Krzysztof Koperski, Junas Adhikary, and Jiawei Han.
+\newblock Spatial data mining: progress and challenges survey paper.
+\newblock In {\em Proc. ACM SIGMOD Workshop on Research Issues on Data Mining
+  and Knowledge Discovery, Montreal, Canada}, pp. 1--10, 1996.
+
+\bibitem{roddick1999bibliography}
+John~F Roddick and Myra Spiliopoulou.
+\newblock A bibliography of temporal, spatial and spatio-temporal data mining
+  research.
+\newblock {\em ACM SIGKDD Explorations Newsletter}, Vol.~1, No.~1, pp. 34--38,
+  1999.
+
+\bibitem{rao2012spatiotemporal}
+K~Venkateswara Rao, A~Govardhan, and KV~Chalapati Rao.
+\newblock Spatiotemporal data mining: Issues, tasks and applications.
+\newblock {\em International Journal of Computer Science and Engineering
+  Survey}, Vol.~3, No.~1, p.~39, 2012.
+
+\bibitem{shekhar2015spatiotemporal}
+Shashi Shekhar, Zhe Jiang, Reem~Y Ali, Emre Eftelioglu, Xun Tang, Venkata
+  Gunturi, and Xun Zhou.
+\newblock Spatiotemporal data mining: A computational perspective.
+\newblock {\em ISPRS International Journal of Geo-Information}, Vol.~4, No.~4,
+  pp. 2306--2338, 2015.
+
+\bibitem{daubechies1990wavelet}
+Ingrid Daubechies.
+\newblock The wavelet transform, time-frequency localization and signal
+  analysis.
+\newblock {\em IEEE transactions on information theory}, Vol.~36, No.~5, pp.
+  961--1005, 1990.
+
+\bibitem{keogh2001online}
+Eamonn Keogh, Selina Chu, David Hart, and Michael Pazzani.
+\newblock An online algorithm for segmenting time series.
+\newblock In {\em Data Mining, 2001. ICDM 2001, Proceedings IEEE International
+  Conference on}, pp. 289--296. IEEE, 2001.
+
+\bibitem{zhang2014splitter}
+Chao Zhang, Jiawei Han, Lidan Shou, Jiajun Lu, and Thomas La~Porta.
+\newblock Splitter: Mining fine-grained sequential patterns in semantic
+  trajectories.
+\newblock {\em Proceedings of the VLDB Endowment}, Vol.~7, No.~9, pp. 769--780,
+  2014.
+
+\bibitem{matsubara2014autoplait}
+Yasuko Matsubara, Yasushi Sakurai, and Christos Faloutsos.
+\newblock Autoplait: Automatic mining of co-evolving time sequences.
+\newblock In {\em Proceedings of the 2014 ACM SIGMOD international conference
+  on Management of data}, pp. 193--204. ACM, 2014.
+
+\bibitem{matsubara2014funnel}
+Yasuko Matsubara, Yasushi Sakurai, Willem~G Van~Panhuis, and Christos
+  Faloutsos.
+\newblock Funnel: automatic mining of spatially coevolving epidemics.
+\newblock In {\em Proceedings of the 20th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pp. 105--114. ACM, 2014.
+
+\end{thebibliography}

@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{lonardi2002finding}
+JLEKS Lonardi and Pranav Patel.
+\newblock Finding motifs in time series.
+\newblock In {\em Proc. of the 2nd Workshop on Temporal Data Mining}, pp.
+  53--68, 2002.
+
+\bibitem{chiu2003probabilistic}
+Bill Chiu, Eamonn Keogh, and Stefano Lonardi.
+\newblock Probabilistic discovery of time series motifs.
+\newblock In {\em Proceedings of the ninth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pp. 493--498. ACM, 2003.
+
+\bibitem{mueen2009exact}
+Abdullah Mueen, Eamonn Keogh, Qiang Zhu, Sydney Cash, and Brandon Westover.
+\newblock Exact discovery of time series motifs.
+\newblock In {\em Proceedings of the 2009 SIAM International Conference on Data
+  Mining}, pp. 473--484. SIAM, 2009.
+
+\bibitem{keogh2001online}
+Eamonn Keogh, Selina Chu, David Hart, and Michael Pazzani.
+\newblock An online algorithm for segmenting time series.
+\newblock In {\em Data Mining, 2001. ICDM 2001, Proceedings IEEE International
+  Conference on}, pp. 289--296. IEEE, 2001.
+
+\bibitem{yamanishi2002unifying}
+Kenji Yamanishi and Jun-ichi Takeuchi.
+\newblock A unifying framework for detecting outliers and change points from
+  non-stationary time series data.
+\newblock In {\em Proceedings of the eighth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pp. 676--681. ACM, 2002.
+
+\bibitem{sharifzadeh2005change}
+Mehdi Sharifzadeh, Farnaz Azmoodeh, and Cyrus Shahabi.
+\newblock Change detection in time series data using wavelet footprints.
+\newblock In {\em International Symposium on Spatial and Temporal Databases},
+  pp. 127--144. Springer, 2005.
+
+\bibitem{dragotti2003wavelet}
+Pier~Luigi Dragotti and Martin Vetterli.
+\newblock Wavelet footprints: theory, algorithms, and applications.
+\newblock {\em IEEE Transactions on Signal Processing}, Vol.~51, No.~5, pp.
+  1306--1323, 2003.
+
+\end{thebibliography}

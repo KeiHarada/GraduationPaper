@@ -1,0 +1,49 @@
+\documentclass[11pt,j4a]{jarticle}
+\usepackage[dvips]{graphicx}
+\usepackage{amsmath}
+\usepackage[top=20truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
+\title{関連研究}
+\author{原田　圭}
+\begin{document}
+\maketitle
+\section{関連研究}
+\subsection{モチーフ探索}
+時系列データ上で頻繁に発生する部分時系列をモチーフと呼ぶ\cite{lonardi2002finding}．
+二つの時系列間の共起パターンを探索するためには，第一段階として各時系列上からモチーフを発見する必要がある．
+top-$K$モチーフ探索問題では時系列上から発生頻度の高い上位$K$個のモチーフを抽出する．
+モチーフ探索問題を解くためのアルゴリズムとしてChiu $et \hspace{3pt} al.$\cite{chiu2003probabilistic}によって線形時間の近似アルゴリズムが提案された．
+その後Mueen $et \hspace{3pt} al.$\cite{mueen2009exact}によって線形時間よりも高速に探索可能な厳密アルゴリズムが提案された．
+
+またTanaka $et \hspace{3pt} al.$によって多次元時系列データ上のモチーフ探索問題が研究されている．
+このアルゴリズムでは初めに主成分分析を用いて多次元時系列を一次元データに変換し，
+その後ランダムプロジェクション\cite{lonardi2002finding}を用いて変換信号からモチーフを発見する．
+
+\subsection{時系列分割および変化点検出}
+時系列データを複数の線分セグメントによって近似することで，局所的な微小変動を取り除くことができ，データの全域的な変化のみをとらえることが可能である．
+一般的に時系列データのセグメント分割ではsliding window，top-down，bottom-upといった手法がよく用いられる\cite{keogh2001online}．
+異なるセグメント間の境界点は，データの統計的性質が変化する点であるとも考えられる．
+元来，変化点検出は検出した変化点の数を基にデータセットを定常モデルに当てはめることを目的として統計学で長く研究されてきた．
+しかし近年，データの時系列分割を目的としてデータマイにング分野で利用されることが増えてきた．
+Yamanishi $et \hspace{3pt} al.$\cite{yamanishi2002unifying}によって変化点検出問題と異常値検出問題が同じパラダイムで取り扱えるフレームワークが提案された．
+Sharifzadeh $et \hspace{3pt} al.$\cite{sharifzadeh2005change}はwavelet footprints\cite{dragotti2003wavelet}を用いた手法を提案した．
+これは決定係数の値により統計的に不連続であると判断できる点を検出する方法である．
+
+\subsection{共起分析}
+
+\subsection{空間クラスタリング}
+
+\subsection{相関分析}
+
+
+
+
+
+
+
+
+%--------------------------------------------------------------------------------------------------
+\clearpage
+\bibliographystyle{junsrt}
+\bibliography{bibList}
+
+\end{document}
