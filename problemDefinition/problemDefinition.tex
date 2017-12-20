@@ -1,23 +1,24 @@
 \documentclass[11pt,j4a]{jarticle}
 
 \usepackage[dvips]{graphicx}
+
 \usepackage{amsmath}
 \usepackage[top=20truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
-\title{問題定義}
+\title{進捗報告}
 \author{原田　圭}
 \begin{document}
 
 \maketitle
-\section{問題定義}
+\section{Problem Description}
 以下に本論文で扱う問題の定義を行う．地理空間情報を持った$m$台のセンサの集合を
 $\textit{\textbf{S}}=\{s_{1},s_{2},\ldots,s_{m}\}$とする．
 各センサ$s_{i} \in \textit{\textbf{S}}(1 \leq i \leq m)$は位置$l_{i}$に設置されている．
-また各センサは属性$a_{i} \in \textit{\textbf{A}},
-\textit{\textbf{A}}=\{a_{1},a_{2},\ldots,a_{p}\}$をもっている．
-センサは時間領域$\textit{\textbf{T}}=\langle t_{1},t_{2},\ldots,t_{n} \rangle$
-上の各タイムスタンプ$t_{j}(1 \leq j \leq n)$においてに$a_{i}$対応する値を測定する．
-ここで各タイムスタンプは等間隔であるものとする．
-$t_{j}$における$s_{i}$の測定値を$s_{i}[t_{j}]$と定義する．
+また属性$a_{i}\in \textit{\textbf{A}},
+\textit{\textbf{A}}=\{a_{1},a_{2},\ldots,a_{p}\}$を持つ．
+$s_{i}$は時間領域$\textit{\textbf{T}}=\langle t_{1},t_{2},\ldots,t_{n} \rangle$
+上の各$t_{j}$において$a_{i}$に対応する値を測定する．
+ここで$t_{j}(1 \leq j \leq n)$はタイムスタンプを表し，これらは等間隔であるものとする．
+タイムスタンプ$t_{j}$における$s_{i}$の測定値を$s_{i}[t_{j}]$と定義する．
 さらに測定値の変化率を式(\ref{eq:changeRate})のように定義する．
 \begin{equation}
 \label{eq:changeRate}
@@ -25,10 +26,9 @@ r_{i}[t_{j}]=\frac{s_{i}[t_{j+1}]-s_{i}[t_{j}]}{t_{j+1}-t_{j}}
 \end{equation}
 \\\\
 $\textbf{定義1}$ \hspace{2pt} ($\textbf{evolving}$) \hspace{2pt}
-しきい値$\theta^{+},\theta^{-}$が与えられたとき
-$r_{i}[t_{j}] \geq \theta^{+}$である場合$s_{i}$は$t_{j}$で正の$evolving$であるという．
+しきい値$\Theta = (\theta^{+},\theta^{-})$が与えられたとき
+$r_{i}[t_{j}] \geq \theta^{+}$である場合$s_{i}$は$t_{j}$で正の$evolving$であるという．また
 $r_{i}[t_{j}] \leq \theta^{-}$である場合$s_{i}$は$t_{j}$で負の$evolving$であるという．
-またこれらの条件を満たす$t_{j}$を$evolving$タイムスタンプと呼ぶ．
 \\\\
 $\textbf{定義2}$ \hspace{2pt} ($\textbf{evolving区間}$) \hspace{2pt}
 センサ$s_{i}$における$\textit{\textbf{T}}$内の連続的な部分区間
@@ -53,54 +53,46 @@ $\forall s \in \textit{\textbf{G}}, \exists s' \in \textit{\textbf{G}}-\{s\}
 \\\\
 $\textbf{定義4}$ \hspace{2pt} ($\textbf{同属性集合}$) \hspace{2pt}
 センサの属性$a$と$\textit{\textbf{S}}$の部分集合$\textit{\textbf{S}}_{a} \subseteq \textit{\textbf{S}}$
-が与えられたとき，$\forall s \in \textit{\textbf{S}}_{a}$が同じ属性$a$であるならば，$\textit{\textbf{S}}_{a}$
+が与えられたとき，$\forall s \in \textit{\textbf{S}}_{a}$が同じ属性$a$をもつならば，$\textit{\textbf{S}}_{a}$
 を$a$の同属性集合と呼ぶ．
 \\\\
-$\textbf{定義5}$ \hspace{2pt} ($\textbf{evolving値}$) \hspace{2pt}
-$\textit{\textbf{G}}$を近傍集合とし，$\textit{\textbf{G}}_{a} \subseteq \textit{\textbf{G}}$
-を$\textit{\textbf{G}}$内の$a$の同属性集合とする．
-このとき$\Theta_{a}=(\theta_{a}^{-},\theta_{a}^{+})$
-を$\textit{\textbf{G}}_{a}$の$evolving値$と呼ぶ．
-$\theta_{a}^{+} \hspace{2pt} (\theta_{a}^{-})$は$s_{i} \in \textit{\textbf{G}}_{a}$が
-タイムスタンプ$t_{j}$で正（負）の$evolving$であるためのしきい値である．
-\\\\
-$\textbf{定義6}$ \hspace{2pt} ($\textbf{マッチ}$) \hspace{2pt}
-近傍集合$\textit{\textbf{G}}$における属性$a$の同属性集合を$\textit{\textbf{G}}_{a}$，
-$\textit{\textbf{G}}_{a}$の$evolving値$を$\Theta_{a}$とする．
+$\textbf{定義5}$ \hspace{2pt} ($\textbf{近傍同属性集合}$) \hspace{2pt}
+属性$a$の同属性集合$\textit{\textbf{S}}_{a}$の部分集合$\textit{\textbf{G}}_{a} \in \textit{\textbf{S}}_{a}$が与えられたとき，
+$\textit{\textbf{G}}_{a}$が近傍集合であるならば，
+$\textit{\textbf{G}}_{a}$を近傍同属性集合と呼ぶ．
+\newpage
+$\textbf{定義6}$ \hspace{2pt} ($\textbf{空間的な共起}$) \hspace{2pt}
+近傍集合を$\textit{\textbf{G}}$，$\textit{\textbf{G}}$内のセンサ$s_{i} \in \textit{\textbf{G}}$が
+$t_{j} \in \textit{\textbf{T}}$で$evolving$であるためのしきい値を$\Theta$とする．
 あるタイムスタンプ$t_{j}$に対して，
-$\forall s_{i} \in \textit{\textbf{G}}_{a},r_{i}[t_{j}] \geq \theta_{a}^{+}$
-であるとき$t_{j}$は$\Theta_{a}$に正でマッチするといい，$t_{j} \xrightarrow{+} \Theta_{a}$と表す．また
-$\forall s_{i} \in \textit{\textbf{G}}_{a}, r_{i}[t_{j}] \leq \theta_{a}^{-}$
-であるとき$t_{j}$は$\Theta_{a}$に負でマッチするといい，$t_{j} \xrightarrow{-} \Theta_{a}$と表す．
-正または負でマッチする時間領域$\textit{\textbf{T}}$内のタイムスタンプの集合を
-$Mat(\Theta_{a})=\{t_{j} \in \textit{\textbf{T}}|t_{j} \xrightarrow{+} \Theta_{a} \lor
-t_{j} \xrightarrow{-} \Theta_{a}\}$と表す．
+$\forall s_{i} \in \textit{\textbf{G}},r_{i}[t_{j}] \geq \theta^{+}$
+であるとき$t_{j}$は$\Theta$に正で共起するといい，$t_{j} \xrightarrow{+} \Theta$と表す．また
+$\forall s_{i} \in \textit{\textbf{G}}, r_{i}[t_{j}] \leq \theta^{-}$
+であるとき$t_{j}$は$\Theta$に負で共起するといい，$t_{j} \xrightarrow{-} \Theta$と表す．
+正または負で共起するタイムスタンプの集合を
+$E(\textit{\textbf{G}})=\{t_{j} \in \textit{\textbf{T}}|t_{j} \xrightarrow{+} \Theta \lor t_{j} \xrightarrow{-} \Theta\}$と表す．
 \\\\
-$\textbf{定義7}$ \hspace{2pt} ($\textbf{空間的な共起}$) \hspace{2pt}
-近傍集合$\textit{\textbf{G}}$における属性$a$の同属性集合を$\textit{\textbf{G}}_{a}$，
-$\textit{\textbf{G}}_{a}$の$evolving値$を$\Theta_{a}$とする．
-しきい値$\phi$が与えられたとき，
-$|Mat(\Theta_{a})| \geq \phi$であるならば$\textit{\textbf{G}}_{a}$は空間的に共起するという．
-\\\\
-$\textbf{定義8}$ \hspace{2pt} ($\textbf{属性間の空間的な共起}$) \hspace{2pt}
-二つの空間的に共起する近傍同属性集合$\textit{\textbf{G}}_{a_{1}} \subseteq \textit{\textbf{G}},
-\textit{\textbf{G}}_{a_{2}} \subseteq \textit{\textbf{G}} \hspace{2pt} (a_{1} \neq a_{2})$に対して，
-それぞれの$evolving値$を$\Theta_{a_{1}},\Theta_{a_{2}}$とする．
-このとき$P_{a_{1},a_{2}}=\{t_{j} \in Mat(\Theta_{a_{1}}) \cap Mat(\Theta_{a_{2}})|
+$\textbf{定義7}$ \hspace{2pt} ($\textbf{属性間の空間的な共起}$) \hspace{2pt}
+二つの近傍同属性集合$\textit{\textbf{G}}_{a_{1}},\textit{\textbf{G}}_{a_{2}}(a_{1} \neq a_{2})$について
+$s_{i} \in \textit{\textbf{G}}_{a_{1}}$が$t_{j} \in \textit{\textbf{T}}$で
+$evolving$であるためのしきい値を$\Theta_{a_{1}}$，
+$s_{i} \in \textit{\textbf{G}}_{a_{2}}$が$t_{j} \in \textit{\textbf{T}}$で
+$evolving$であるためのしきい値を$\Theta_{a_{2}}$とする．
+$\textit{\textbf{G}}_{a_{1}} \cup \textit{\textbf{G}}_{a_{2}}$が近傍集合であるとき，
+$P_{a_{1},a_{2}}=\{t_{j} \in E(\textit{\textbf{G}}_{a_{1}}) \cap E(\textit{\textbf{G}}_{a_{2}})|
 (t_{j} \xrightarrow{+} \Theta_{a_{1}} \land t_{j} \xrightarrow{+} \Theta_{a_{2}}) \lor
 (t_{j} \xrightarrow{-} \Theta_{a_{1}} \land t_{j} \xrightarrow{-} \Theta_{a_{2}})\}$
-を$\textit{\textbf{G}}_{a_{1}}$と$\textit{\textbf{G}}_{a_{2}}$の正の空間的な共起と呼ぶ．
-また$N_{a_{1},a_{2}}=\{t_{j} \in Mat(\Theta_{a_{1}}) \cap Mat(\Theta_{a_{2}})|
+を$\textit{\textbf{G}}_{a_{1}},\textit{\textbf{G}}_{a_{2}}$間の正の空間的な共起と呼ぶ．
+また$N_{a_{1},a_{2}}=\{t_{j} \in E(\textit{\textbf{G}}_{a_{1}}) \cap E(\textit{\textbf{G}}_{a_{2}})|
 (t_{j} \xrightarrow{+} \Theta_{a_{1}} \land t_{j} \xrightarrow{-} \Theta_{a_{2}}) \lor
 (t_{j} \xrightarrow{-} \Theta_{a_{1}} \land t_{j} \xrightarrow{+} \Theta_{a_{2}})\}$
-を$\textit{\textbf{G}}_{a_{1}}$と$\textit{\textbf{G}}_{a_{2}}$の負の空間的な共起と呼ぶ．
+を$\textit{\textbf{G}}_{a_{1}},\textit{\textbf{G}}_{a_{2}}$間の負の空間的な共起と呼ぶ．
 \\\\
-$\textbf{定義9}$ \hspace{2pt} ($\textbf{属性間の相関}$) \hspace{2pt}
-二つの空間的に共起する近傍同属性集合$\textit{\textbf{G}}_{a_{1}} \subseteq \textit{\textbf{G}},
-\textit{\textbf{G}}_{a_{2}} \subseteq \textit{\textbf{G}} \hspace{2pt} (a_{1} \neq a_{2})$に対して，
-属性間の正の空間的な共起を$P_{a_{1},a_{2}}$，負の空間的な共起を$N_{a_{1},a_{2}}$とする．
-しきい値$\psi$が与えられたとき，$|P_{a_{1},a_{2}}| \geq \psi \hspace{2pt} (|N_{a_{1},a_{2}}| \geq \psi)$であるならば，
-近傍集合$\textit{\textbf{G}}$内において属性$a_{1},a_{2}$間にセンサ群$\textit{\textbf{G}}_{a_{1}},
-\textit{\textbf{G}}_{a_{2}}$上で正（負）の相関があるという．
+$\textbf{定義8}$ \hspace{2pt} ($\textbf{属性間の相関}$) \hspace{2pt}
+二つの近傍同属性集合$\textit{\textbf{G}}_{a_{1}},\textit{\textbf{G}}_{a_{2}}(a_{1} \neq a_{2})$間の正の空間的な共起を$P_{a_{1},a_{2}}$，負の空間的な共起を$N_{a_{1},a_{2}}$とする．
+しきい値$\psi$が与えられたとき，$|P_{a_{1},a_{2}}| \geq \psi \hspace{2pt}$であるならば，
+属性$a_{1},a_{2}$間にセンサ群$\textit{\textbf{G}}_{a_{1}},\textit{\textbf{G}}_{a_{2}}$上で正の相関があるという．
+また，$|N_{a_{1},a_{2}}| \geq \psi \hspace{2pt}$であるならば，
+属性$a_{1},a_{2}$間にセンサ群$\textit{\textbf{G}}_{a_{1}},\textit{\textbf{G}}_{a_{2}}$上で負の相関があるという．
 
 \end{document}
